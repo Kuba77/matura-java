@@ -125,29 +125,21 @@ public class Main {
     }
 
     private static int compareBitsBiggest(int x, char character) {
-        if (biggest.charAt(x) == '0') {
-            if (character == '1') {
-                return 1;
-            }
+        if (biggest.charAt(x) == '0' && character == '1') {
+            return 1;
         }
-        else {
-            if (character == '0') {
-                return -1;
-            }
+        else if (biggest.charAt(x) == '1' && character == '0') {
+            return -1;
         }
         return 0;
     }
 
     private static int compareBitsSmallest(int x, char character) {
-        if (smallest.charAt(x) == '1') {
-            if (character == '0') {
-                return 1;
-            }
+        if (smallest.charAt(x) == '1' && character == '0') {
+            return 1;
         }
-        else {
-            if (character == '1') {
-                return -1;
-            }
+        else if (smallest.charAt(x) == '0' && character == '1') {
+            return -1;
         }
         return 0;
     }
